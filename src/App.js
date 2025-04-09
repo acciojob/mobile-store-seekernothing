@@ -21,14 +21,14 @@ class App extends Component {
       products: [],
       loading: true,
       showModal: false,
-      isAddProductModal: false
+      isAddProductModal: false,
     };
   }
 
   async componentDidMount() {
     this.setState({
       products: products,
-      loading: false
+      loading: false,
     });
   }
 
@@ -39,7 +39,7 @@ class App extends Component {
           return newProduct;
         }
         return oldProduct;
-      })
+      }),
     });
 
   deleteProduct = (deleteId) =>
@@ -55,7 +55,7 @@ class App extends Component {
         })
         .map((oldProduct) => {
           return oldProduct;
-        })
+        }),
     });
 
   addProduct = (newProduct) => {
@@ -64,7 +64,7 @@ class App extends Component {
 
     this.setState({
       products: [...this.state.products, newProduct],
-      isAddProductModal: false
+      isAddProductModal: false,
     });
   };
 
